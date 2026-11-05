@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10111b"><meta name="description" content="A calm, private mobile assistant for notes, tasks, and reminders.">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <title>Orbit — your everyday assistant</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="#" aria-label="Orbit home"><span class="brand-mark">✳</span><span>orbit</span></a><button id="notifyBtn" class="icon-button" title="Enable notifications" aria-label="Enable notifications">♧</button></header>
+    <section class="welcome"><div class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL SPACE</div><h1>Make room for<br><span>what matters.</span></h1><p class="subhead">A little help keeping your day in orbit.</p></section>
+    <section class="composer" aria-label="Ask Orbit"><div class="composer-top"><span class="sparkle">✦</span><label for="prompt">What can I help with?</label></div><textarea id="prompt" rows="2" placeholder="Try “remind me to call Maya at 5pm”"></textarea><div class="composer-actions"><button id="micBtn" class="mic" aria-label="Speak">⌁</button><span class="hint">Notes · tasks · reminders</span><button id="sendBtn" class="send">Send <span>↗</span></button></div></section>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <section class="section"><div class="section-heading"><div><div class="eyebrow">YOUR DAY</div><h2>Today, gently.</h2></div><button id="clearDone" class="text-button">Clear done</button></div><div id="tasks" class="task-list"></div></section>
+    <section class="section notes-section"><div class="section-heading"><div><div class="eyebrow">SAVED FOR YOU</div><h2>Quick notes</h2></div><button id="addNote" class="text-button">＋ Add note</button></div><div id="notes" class="notes-grid"></div></section>
+    <footer><span>✳</span> Your information stays on this device.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
